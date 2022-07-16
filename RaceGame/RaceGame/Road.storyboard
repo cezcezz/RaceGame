@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PKU-7M-kUg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8KH-ni-XhU">
+            <objects>
+                <navigationController id="PKU-7M-kUg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HfE-HE-Cx4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="VH3-hc-0ZG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATj-4Y-i0R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-620" y="124"/>
+        </scene>
         <!--Road View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -15,23 +31,22 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiC-UR-1Wn">
-                                <rect key="frame" x="335" y="59" width="64" height="31"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="siV-Hi-dNo">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="l7s-4o-9S5">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="KiC-UR-1Wn">
+                                <rect key="frame" x="323.5" y="5" width="70.5" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Pause"/>
                                 <connections>
                                     <action selector="didTapPauseButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="b4r-3D-ITp"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="KiC-UR-1Wn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="DXZ-m0-KBJ"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KiC-UR-1Wn" secondAttribute="trailing" constant="15" id="zJG-6b-8f6"/>
-                        </constraints>
-                    </view>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,7 +61,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvC-a8-gNC">
-                                <rect key="frame" x="20" y="433" width="374" height="30"/>
+                                <rect key="frame" x="165.5" y="432.5" width="83.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="GOHome"/>
                                 <connections>
@@ -57,10 +72,8 @@
                         <viewLayoutGuide key="safeArea" id="kcG-jk-hhO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GvC-a8-gNC" firstAttribute="leading" secondItem="kcG-jk-hhO" secondAttribute="leading" constant="20" id="649-VP-cGx"/>
-                            <constraint firstItem="kcG-jk-hhO" firstAttribute="trailing" secondItem="GvC-a8-gNC" secondAttribute="trailing" constant="20" id="aDf-oN-cIO"/>
-                            <constraint firstItem="GvC-a8-gNC" firstAttribute="top" secondItem="kcG-jk-hhO" secondAttribute="top" constant="389" id="frM-Cq-kIG"/>
-                            <constraint firstItem="GvC-a8-gNC" firstAttribute="centerY" secondItem="EpB-7g-sca" secondAttribute="centerY" id="ysU-lS-VFV"/>
+                            <constraint firstItem="GvC-a8-gNC" firstAttribute="centerY" secondItem="EpB-7g-sca" secondAttribute="centerY" id="Fg5-LH-1J8"/>
+                            <constraint firstItem="GvC-a8-gNC" firstAttribute="centerX" secondItem="EpB-7g-sca" secondAttribute="centerX" id="XHB-3b-hcl"/>
                         </constraints>
                     </view>
                 </viewController>

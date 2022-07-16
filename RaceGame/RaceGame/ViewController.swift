@@ -16,33 +16,30 @@ class ViewController: UIViewController {
 
     @IBAction func didTapLeadersBoardViewController(){
         let str: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let LeaderBoardViewController: LeaderBoardViewController = str.instantiateViewController(withIdentifier: "LeaderBoardViewController") as! LeaderBoardViewController
-        
-        LeaderBoardViewController.modalPresentationStyle = .fullScreen
-        LeaderBoardViewController.modalTransitionStyle = .crossDissolve
-        
-        self.present(LeaderBoardViewController, animated: true)
+        if let leaderBoardViewController: LeaderBoardViewController = str.instantiateViewController(withIdentifier: "LeaderBoardViewController") as? LeaderBoardViewController{
+     
+        self.navigationController?.pushViewController(leaderBoardViewController, animated: true)
+        }
     }
     
     @IBAction func didTapSettingsViewController(){
         let str: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let SettingsViewController: SettingsViewController = str.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
-        
-        SettingsViewController.modalPresentationStyle = .fullScreen
-        SettingsViewController.modalTransitionStyle = .crossDissolve
-        
-        self.present(SettingsViewController, animated: true)
+        if let settingsViewController: SettingsViewController = str.instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController{
+   
+        self.navigationController?.pushViewController(settingsViewController, animated: true)
+        }
     }
-    
     @IBAction func didTapRoadViewController(){
         let str: UIStoryboard = UIStoryboard(name: "Road", bundle: nil)
-        let RoadViewController: RoadViewController = str.instantiateViewController(withIdentifier: "RoadViewController") as! RoadViewController
+        if let roadViewController: RoadViewController = str.instantiateViewController(withIdentifier: "RoadViewController") as? RoadViewController{
         
-        RoadViewController.modalPresentationStyle = .fullScreen
-        RoadViewController.modalTransitionStyle = .crossDissolve
         
-        self.present(RoadViewController, animated: true)
+        self.navigationController?.pushViewController(roadViewController, animated: true)
+        }
     }
 
+    
+    
+    
 }
 

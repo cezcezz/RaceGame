@@ -16,11 +16,11 @@ class PauseRoadViewController: UIViewController {
 
     @IBAction func didTapGoHomeButton(){
         let str:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let ViewController: ViewController = str.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        if let viewController: ViewController = str.instantiateViewController(withIdentifier: "ViewController") as? ViewController{
         
-    ViewController.modalPresentationStyle = .fullScreen
-        
-        self.present(ViewController, animated: true)
+        self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
-
+    
+    
 }

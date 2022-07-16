@@ -13,9 +13,6 @@ class LeaderBoardViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBAction func didTapBackButton(){
-        self.dismiss(animated: true)
-    }
 
 
 }
