@@ -7,49 +7,65 @@
 
 import UIKit
 
-//class CarMetod {
-//    var xPos: Int = 0
-//
-//    func swipeLeft() -> Void{
-//        self.xPos -= 106
-//        if self.xPos < Int(self.view.frame.width)/2 - 48 - 10 - 96 {
-//            self.xPos = Int(self.view.frame.width)/2 - 48 - 10 - 96
-//        } else if self.xPos > Int(self.view.frame.width)/2 + 48 + 10 + 96{
-//            self.xPos = Int(self.view.frame.width)/2 + 48 + 10 + 96
-//        }
-//        return
-//    }
-//
-//    func swipeRight()->Void{
-//        self.xPos += 106
-//        if self.xPos < Int(self.view.frame.width)/2 - 48 - 10 - 96 {
-//            self.xPos = Int(self.view.frame.width)/2 - 48 - 10 - 96
-//        } else if self.xPos > Int(self.view.frame.width)/2 + 48 + 10 + 96{
-//            self.xPos = Int(self.view.frame.width)/2 + 48 + 10 + 96
-//        }
-//        return
-//
-//    }
-//
-//    func getXPos() -> Int {
-//        return self.xPos
-//    }
-//
-//    init(xPos: Int){
-//        if self.xPos < Int(self.view.frame.width)/2 - 48 - 10 - 96 {
-//            self.xPos = Int(self.view.frame.width)/2 - 48 - 10 - 96
-//        } else if self.xPos > Int(self.view.frame.width)/2 + 48 + 10 + 96{
-//            self.xPos = Int(self.view.frame.width)/2 + 48 + 10 + 96
-//        }
-//    }
-//}
+class ImageY{
+    var image = UIImageView()
+    var yCordinate = Int()
+    
+    init (image: UIImageView,yCordinate: Int) {
+        self.image = image
+        self.yCordinate = yCordinate
+    }
+    
+    func getXCor() -> CGFloat{
+        return self.image.frame.minX
+    }
+    func getYCor() -> Int{
+        self.yCordinate = Int(self.image.frame.minY)
+        return self.yCordinate
+    }
+}
+
+enum lineControl: CaseIterable{
+    case leftLine
+    case middleLine
+    case rightLine
+    
+    func getLine(mainView: UIView) -> CGRect{
+        switch self {
+        case .leftLine:
+            return CGRect(x: Int(mainView.frame.width)/2 - 48 - 10 - 96 , y: Int(mainView.frame.height) - 96 - 48, width: 96, height: 96)
+        case .middleLine:
+           return CGRect(x: Int(mainView.frame.width)/2 - 48 , y: Int(mainView.frame.height) - 96 - 48, width: 96, height: 96)
+        case .rightLine:
+          return  CGRect(x: Int(mainView.frame.width)/2 + 48 + 10 , y: Int(mainView.frame.height) - 96 - 48, width: 96, height: 96)
+        }
+    }
+    
+    func getLineBarrier(mainView: UIView, yCor: Int) -> CGRect{
+        switch self {
+        case .leftLine:
+            return CGRect(x: Int(mainView.frame.width)/2 - 48 - 10 - 96 , y: yCor, width: 96, height: 96)
+        case .middleLine:
+           return CGRect(x: Int(mainView.frame.width)/2 - 48 , y: yCor, width: 96, height: 96)
+        case .rightLine:
+          return  CGRect(x: Int(mainView.frame.width)/2 + 48 + 10 , y: yCor, width: 96, height: 96)
+        }
+    }
+}
 
 class RoadViewController: UIViewController {
+    
+    @IBOutlet var scoreLabel: UILabel!
+    
+    var score: Int = 0
 
-    var imageView: UIImageView!
+    var imageView = UIImageView()
     let car = UIImage(named: "car")
+    var arrayImageView = [ImageY]()
+  //  var copyView = UIView()
    // var carMet: CarMetod = CarMetod.init(xPos: 0)
-    var xPosit: Int = 0
+    
+    var position: lineControl = .middleLine
     
     
     override func viewDidLoad() {
@@ -71,21 +87,67 @@ class RoadViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        imageView = UIImageView(frame: CGRect(x: Int(self.view.frame.width)/2 - 48 , y: Int(self.view.frame.height) - 96 - 48, width: 96, height: 96))
-        imageView!.image = car
-        imageView!.contentMode = .scaleToFill
-        self.view.addSubview(imageView!)
-        
-        xPosit = Int(self.view.frame.width)/2 - 48
+        imageView.frame = position.getLine(mainView: self.view)
+        imageView.image = car
+        imageView.contentMode = .scaleToFill
+        imageView.layer.zPosition = 1
+        self.view.addSubview(imageView)
+      
        // carMet.xPos = xPosit
         
-        let firstOasisStrip: UIView = UIView(frame: CGRect(x: (Int(self.view.frame.width)/2 - 48 - 6), y: 0, width: 2, height: Int(self.view.frame.height)))
+        let firstOasisStrip: UIView = UIView(frame: CGRect(x: (Int(self.view.frame.width)/2 - 48 - 6), y: Int(scoreLabel.frame.maxY), width: 2, height: Int(self.view.frame.height)))
         firstOasisStrip.backgroundColor = .black
         self.view.addSubview(firstOasisStrip)
         
-        let secondOasisStrip: UIView = UIView(frame: CGRect(x: (Int(self.view.frame.width)/2 + 48 + 4), y: 0, width: 2, height: Int(self.view.frame.height)))
+        let secondOasisStrip: UIView = UIView(frame: CGRect(x: (Int(self.view.frame.width)/2 + 48 + 4), y: Int(scoreLabel.frame.maxY), width: 2, height: Int(self.view.frame.height)))
         secondOasisStrip.backgroundColor = .black
         self.view.addSubview(secondOasisStrip)
+        
+        scoreLabel.backgroundColor = .systemGray2
+        scoreLabel.textColor = .systemGray6
+        scoreLabel.layer.zPosition = 1
+        self.scoreLabel.text = "Your score: \(self.score)"
+        
+     //   copyView = self.view
+        var yCor: Int = 20
+        
+        let timer = Timer.scheduledTimer(
+            withTimeInterval: 0.04,
+            repeats: true,
+            block: {timer in
+                
+                    if Int.random(in: 1...70) == 1{
+                        var tempImageView = UIImageView()
+                        let barrier = UIImage(named: "log")
+                        tempImageView.frame = lineControl.allCases.randomElement()?.getLineBarrier(mainView: self.view, yCor: yCor) ?? CGRect(x: Int(self.view.frame.width)/2 - 48 , y: yCor, width: 64, height: 64)
+                        tempImageView.image = barrier
+                        tempImageView.contentMode = .scaleToFill
+                        var tempImageY: ImageY = ImageY(image: tempImageView, yCordinate: 20)
+                        self.arrayImageView.append(tempImageY)
+                        self.view.addSubview(tempImageView)
+                    }
+                
+                for i in self.arrayImageView{
+                    
+                    if i.image.frame.intersects(self.imageView.frame) {
+                        let explosion = UIImage(named: "explosion")
+                        self.imageView.image = explosion
+                        self.imageView.contentMode = .scaleToFill
+                        timer.invalidate()
+                    }
+                    
+                    if Int(i.image.frame.minY) >= Int(self.view.frame.height){
+                        i.image.removeFromSuperview()
+                        self.arrayImageView.removeFirst()
+                        self.score += 1
+                        self.scoreLabel.text = "Your score: \(self.score)"
+                    }
+                    
+                    i.yCordinate += 6
+                    let xCor = Int(i.image.frame.minX)
+                    i.image.frame = CGRect(x: xCor, y: i.yCordinate, width: 96, height: 96)
+                }
+            })
     }
    
     @IBAction func didTapPauseButton(){
@@ -96,36 +158,38 @@ class RoadViewController: UIViewController {
     }
 
     @objc func swipeLeft(){
-       xPosit -= 106
+        
+        if position == .rightLine {
+            position = .middleLine
+        } else if position == .middleLine{
+            position = .leftLine
+        } else if position == .leftLine{
+            position = .leftLine
+        }
+        
+    
         UIView.animate(withDuration: 0.3, animations: {
-            if self.xPosit < Int(self.view.frame.width)/2 - 48 - 10 - 96 {
-                self.xPosit = Int(self.view.frame.width)/2 - 48 - 10 - 96
-            }
-
-           //self.carMet.swipeLeft()
-            self.imageView.frame = CGRect(x: self.xPosit, y: Int(self.view.frame.height) - 96 - 48, width: 96, height: 96)
+            self.imageView.frame = self.position.getLine(mainView: self.view)
         }, completion: {_ in
             print("Completed")
         })
     }
     
     @objc func swipeRight(){
-       // self.carMet.swipeRight()
-        xPosit += 106
+       
+        if position == .leftLine{
+            position = .middleLine
+        } else if position == .middleLine{
+            position = .rightLine
+        } else if position == .rightLine{
+            position = .rightLine
+        }
         
         UIView.animate(withDuration: 0.3, animations: {
-            if self.xPosit > Int(self.view.frame.width)/2 + 48 + 15 {
-                self.xPosit = Int(self.view.frame.width)/2 + 48 + 11
-                
-            }
-
-            self.imageView.frame = CGRect(x: self.xPosit , y: Int(self.view.frame.height) - 96 - 48, width: 96, height: 96)
-        }, completion: {_ in print("Completed")
+            self.imageView.frame = self.position.getLine(mainView: self.view)
+        }, completion: {_ in
+            print("Completed")
         })
-        
-        
-        
     }
     
-
 }

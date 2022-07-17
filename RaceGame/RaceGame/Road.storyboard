@@ -31,8 +31,24 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vR3-bZ-mRY">
+                                <rect key="frame" x="20" y="98" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7V9-dJ-AV4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vR3-bZ-mRY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="TJa-UF-oJf"/>
+                            <constraint firstItem="vR3-bZ-mRY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="U4E-GO-ecS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vR3-bZ-mRY" secondAttribute="trailing" constant="20" id="kPi-iU-fOF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="siV-Hi-dNo">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="l7s-4o-9S5">
@@ -47,6 +63,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="scoreLabel" destination="vR3-bZ-mRY" id="dBN-Pw-S1a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
