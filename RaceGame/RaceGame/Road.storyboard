@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rakkas-Regular.ttf">
+            <string>Rakkas-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="8KH-ni-XhU">
@@ -32,12 +37,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vR3-bZ-mRY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vR3-bZ-mRY">
                                 <rect key="frame" x="20" y="98" width="374" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7V9-dJ-AV4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Rakkas-Regular" family="Rakkas" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -64,6 +69,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="pauseButton" destination="KiC-UR-1Wn" id="9Ka-zM-zA5"/>
                         <outlet property="scoreLabel" destination="vR3-bZ-mRY" id="dBN-Pw-S1a"/>
                     </connections>
                 </viewController>
@@ -95,6 +101,9 @@
                             <constraint firstItem="GvC-a8-gNC" firstAttribute="centerX" secondItem="EpB-7g-sca" secondAttribute="centerX" id="XHB-3b-hcl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="goHomeButton" destination="GvC-a8-gNC" id="Gkl-rX-QvL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7l-Kn-dI0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

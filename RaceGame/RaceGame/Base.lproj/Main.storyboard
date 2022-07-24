@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rakkas-Regular.ttf">
+            <string>Rakkas-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="3ha-na-Spo">
@@ -56,12 +61,12 @@
                                     <action selector="didTapRoadViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="9US-u3-b02"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super-Puper 2d RACE!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zy-Zn-lQp">
-                                <rect key="frame" x="78.5" y="158" width="257.5" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super-Puper 2d RACE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zy-Zn-lQp">
+                                <rect key="frame" x="78.5" y="158" width="257.5" height="83.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="257.5" id="ZzZ-fh-PrW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Rakkas-Regular" family="Rakkas" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -84,6 +89,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sGb-yp-2qz"/>
+                    <connections>
+                        <outlet property="leaderBoardButton" destination="nsb-lq-mim" id="ZVo-hF-OkI"/>
+                        <outlet property="nameLabel" destination="6Zy-Zn-lQp" id="ZSg-qB-038"/>
+                        <outlet property="playButton" destination="KCF-f9-wdq" id="2qh-qD-asr"/>
+                        <outlet property="settingsButton" destination="hVR-My-eQs" id="Fkn-Cf-HW0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,8 +109,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ft-ti-Oa1">
-                                <rect key="frame" x="20" y="74" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="74" width="374" height="33"/>
+                                <fontDescription key="fontDescription" name="Rakkas-Regular" family="Rakkas" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -111,8 +122,8 @@
                                 </constraints>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyX-0p-38i">
-                                <rect key="frame" x="30" y="237" width="111" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="30" y="235" width="98.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Rakkas-Regular" family="Rakkas" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -129,6 +140,10 @@
                             <constraint firstItem="nyX-0p-38i" firstAttribute="leading" secondItem="AxH-Jb-p2P" secondAttribute="leading" constant="30" id="skg-k1-Mqh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingLabel" destination="7Ft-ti-Oa1" id="K0q-Bq-e83"/>
+                        <outlet property="soundValueLabel" destination="nyX-0p-38i" id="5zy-oO-FxQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rli-yI-GUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,20 +158,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LeaderBoard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcT-NB-0fD">
-                                <rect key="frame" x="20" y="74" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="74" width="374" height="33"/>
+                                <fontDescription key="fontDescription" name="Rakkas-Regular" family="Rakkas" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rer-OQ-lbq">
-                                <rect key="frame" x="69" y="289" width="50" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="69" y="284.5" width="44" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Rakkas-Regular" family="Rakkas" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgT-Wi-vD0">
-                                <rect key="frame" x="278" y="289" width="67" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="284.5" y="284.5" width="60.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Rakkas-Regular" family="Rakkas" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -173,6 +188,11 @@
                             <constraint firstItem="Szr-rT-MEa" firstAttribute="bottom" secondItem="hgT-Wi-vD0" secondAttribute="bottom" constant="552" id="tmX-pq-h8l"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="distLabel" destination="hgT-Wi-vD0" id="JKY-Hm-REp"/>
+                        <outlet property="leaderBoard" destination="FcT-NB-0fD" id="bFA-mm-aD5"/>
+                        <outlet property="nameLabel" destination="Rer-OQ-lbq" id="76P-0C-GhP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXw-db-Mue" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

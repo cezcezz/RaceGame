@@ -8,10 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var nameLabel: UILabel!
+    
+    @IBOutlet var leaderBoardButton: UIButton!
+    @IBOutlet var settingsButton: UIButton!
+    @IBOutlet var playButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.nameLabel.addShadow()
+        
+        self.leaderBoardButton.addShadow()
+        self.settingsButton.addShadow()
+        self.playButton.addShadow()
     }
 
     @IBAction func didTapLeadersBoardViewController(){

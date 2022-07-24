@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C942160828885C4500930AF7 /* Rakkas-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C942160728885C4500930AF7 /* Rakkas-Regular.ttf */; };
 		C9DB43E92875812700A001C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DB43E82875812700A001C8 /* AppDelegate.swift */; };
 		C9DB43EB2875812700A001C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DB43EA2875812700A001C8 /* SceneDelegate.swift */; };
 		C9DB43ED2875812700A001C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DB43EC2875812700A001C8 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C942160728885C4500930AF7 /* Rakkas-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rakkas-Regular.ttf"; sourceTree = "<group>"; };
 		C9DB43E52875812700A001C8 /* RaceGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DB43E82875812700A001C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9DB43EA2875812700A001C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C942160628885C2500930AF7 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				C942160728885C4500930AF7 /* Rakkas-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		C9DB43DC2875812700A001C8 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		C9DB43E72875812700A001C8 /* RaceGame */ = {
 			isa = PBXGroup;
 			children = (
+				C942160628885C2500930AF7 /* Font */,
 				C9DB43E82875812700A001C8 /* AppDelegate.swift */,
 				C9DB43EA2875812700A001C8 /* SceneDelegate.swift */,
 				C9DB43EC2875812700A001C8 /* ViewController.swift */,
@@ -144,6 +155,7 @@
 				C9DB43F52875813200A001C8 /* LaunchScreen.storyboard in Resources */,
 				C9DB43F22875813200A001C8 /* Assets.xcassets in Resources */,
 				C9DB43F02875812800A001C8 /* Main.storyboard in Resources */,
+				C942160828885C4500930AF7 /* Rakkas-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

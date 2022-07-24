@@ -25,6 +25,34 @@ class ImageY{
     }
 }
 
+extension UILabel{
+    func addShadow() {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        self.layer.shadowRadius = 2
+        //self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+        //self.layer.shouldRasterize = true
+        //self.layer.rasterizationScale = UIScreen.main.scale
+    }
+}
+
+extension UIButton{
+    func addShadow() {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        self.layer.shadowRadius = 2
+    }
+}
+
+extension UILabel{
+    func addCorner() {
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 14
+    }
+}
+
 enum lineControl: CaseIterable{
     case leftLine
     case middleLine
@@ -55,7 +83,9 @@ enum lineControl: CaseIterable{
 
 class RoadViewController: UIViewController {
     
+    
     @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet var pauseButton: UIButton!
     
     var score: Int = 0
 
@@ -78,6 +108,10 @@ class RoadViewController: UIViewController {
         let didSwipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeRight))
         didSwipeRight.direction = .right
         self.view.addGestureRecognizer(didSwipeRight)
+        
+        self.pauseButton.addShadow()
+        self.scoreLabel.addShadow()
+        self.scoreLabel.addCorner()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,9 +142,32 @@ class RoadViewController: UIViewController {
         scoreLabel.layer.zPosition = 1
         self.scoreLabel.text = "Your score: \(self.score)"
         
+        let myString = "Your score:"
+        let myAttribute = [ NSAttributedString.Key.foregroundColor: UIColor.blue ]
+        let myAttrString = NSAttributedString(string: myString + String(self.score), attributes: myAttribute)
+        self.scoreLabel.attributedText = myAttrString
+        
+        
      //   copyView = self.view
         var yCor: Int = 20
-        
+        startedGameTimer(yCord: yCor,mainView: self.view )
+    }
+   
+    @IBAction func didTapPauseButton(){
+        let str: UIStoryboard = UIStoryboard(name: "Road", bundle: nil)
+        if let pauseRoadViewController: PauseRoadViewController = str.instantiateViewController(withIdentifier: "PauseRoadViewController") as? PauseRoadViewController{
+            self.navigationController?.pushViewController(pauseRoadViewController, animated: true)
+        }
+    }
+    
+    func didIntersect(timerr: Timer){
+        let explosion = UIImage(named: "explosion")
+        self.imageView.image = explosion
+        self.imageView.contentMode = .scaleToFill
+        timerr.invalidate()
+    }
+    
+    func startedGameTimer(yCord: Int, mainView: UIView){
         let timer = Timer.scheduledTimer(
             withTimeInterval: 0.04,
             repeats: true,
@@ -119,8 +176,11 @@ class RoadViewController: UIViewController {
                     if Int.random(in: 1...70) == 1{
                         var tempImageView = UIImageView()
                         let barrier = UIImage(named: "log")
-                        tempImageView.frame = lineControl.allCases.randomElement()?.getLineBarrier(mainView: self.view, yCor: yCor) ?? CGRect(x: Int(self.view.frame.width)/2 - 48 , y: yCor, width: 64, height: 64)
+                        tempImageView.frame = lineControl.allCases.randomElement()?.getLineBarrier(mainView: mainView, yCor: yCord) ?? CGRect(x: Int(self.view.frame.width)/2 - 48 , y: yCord, width: 62, height: 35)
                         tempImageView.image = barrier
+                        tempImageView.clipsToBounds = true
+                        tempImageView.backgroundColor = .systemGray6
+                        tempImageView.layer.cornerRadius = 35
                         tempImageView.contentMode = .scaleToFill
                         var tempImageY: ImageY = ImageY(image: tempImageView, yCordinate: 20)
                         self.arrayImageView.append(tempImageY)
@@ -128,12 +188,9 @@ class RoadViewController: UIViewController {
                     }
                 
                 for i in self.arrayImageView{
-                    
+//Intersect
                     if i.image.frame.intersects(self.imageView.frame) {
-                        let explosion = UIImage(named: "explosion")
-                        self.imageView.image = explosion
-                        self.imageView.contentMode = .scaleToFill
-                        timer.invalidate()
+                        self.didIntersect(timerr: timer)
                     }
                     
                     if Int(i.image.frame.minY) >= Int(self.view.frame.height){
@@ -145,16 +202,12 @@ class RoadViewController: UIViewController {
                     
                     i.yCordinate += 6
                     let xCor = Int(i.image.frame.minX)
-                    i.image.frame = CGRect(x: xCor, y: i.yCordinate, width: 96, height: 96)
+                    UIView.animate(withDuration: 0.041, delay: 0, animations: {
+                        i.image.frame = CGRect(x: xCor, y: i.yCordinate, width: 96, height: 96)
+                    })
+                   
                 }
             })
-    }
-   
-    @IBAction func didTapPauseButton(){
-        let str: UIStoryboard = UIStoryboard(name: "Road", bundle: nil)
-        if let pauseRoadViewController: PauseRoadViewController = str.instantiateViewController(withIdentifier: "PauseRoadViewController") as? PauseRoadViewController{
-            self.navigationController?.pushViewController(pauseRoadViewController, animated: true)
-        }
     }
 
     @objc func swipeLeft(){
