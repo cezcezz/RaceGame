@@ -88,6 +88,7 @@ class RoadViewController: UIViewController {
     @IBOutlet var pauseButton: UIButton!
     
     var score: Int = 0
+    var timer = Timer()
 
     var imageView = UIImageView()
     let car = UIImage(named: "car")
@@ -168,7 +169,7 @@ class RoadViewController: UIViewController {
     }
     
     func startedGameTimer(yCord: Int, mainView: UIView){
-        let timer = Timer.scheduledTimer(
+        timer = Timer.scheduledTimer(
             withTimeInterval: 0.04,
             repeats: true,
             block: {timer in
