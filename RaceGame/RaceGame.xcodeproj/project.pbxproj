@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C942160828885C4500930AF7 /* Rakkas-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C942160728885C4500930AF7 /* Rakkas-Regular.ttf */; };
+		C9C02E202896DA7A00E4031C /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C02E1F2896DA7A00E4031C /* AlertView.xib */; };
+		C9C02E222896DB0C00E4031C /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C02E212896DB0C00E4031C /* AlertView.swift */; };
 		C9DB43E92875812700A001C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DB43E82875812700A001C8 /* AppDelegate.swift */; };
 		C9DB43EB2875812700A001C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DB43EA2875812700A001C8 /* SceneDelegate.swift */; };
 		C9DB43ED2875812700A001C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DB43EC2875812700A001C8 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		C942160728885C4500930AF7 /* Rakkas-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rakkas-Regular.ttf"; sourceTree = "<group>"; };
+		C9C02E1F2896DA7A00E4031C /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		C9C02E212896DB0C00E4031C /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		C9DB43E52875812700A001C8 /* RaceGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DB43E82875812700A001C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9DB43EA2875812700A001C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				C9DB43F12875813200A001C8 /* Assets.xcassets */,
 				C9DB43F32875813200A001C8 /* LaunchScreen.storyboard */,
 				C9DB43F62875813200A001C8 /* Info.plist */,
+				C9C02E1F2896DA7A00E4031C /* AlertView.xib */,
+				C9C02E212896DB0C00E4031C /* AlertView.swift */,
 			);
 			path = RaceGame;
 			sourceTree = "<group>";
@@ -154,6 +160,7 @@
 				C9DB44032875831F00A001C8 /* Road.storyboard in Resources */,
 				C9DB43F52875813200A001C8 /* LaunchScreen.storyboard in Resources */,
 				C9DB43F22875813200A001C8 /* Assets.xcassets in Resources */,
+				C9C02E202896DA7A00E4031C /* AlertView.xib in Resources */,
 				C9DB43F02875812800A001C8 /* Main.storyboard in Resources */,
 				C942160828885C4500930AF7 /* Rakkas-Regular.ttf in Resources */,
 			);
@@ -171,6 +178,7 @@
 				C9DB43EB2875812700A001C8 /* SceneDelegate.swift in Sources */,
 				C9DB43FD2875823D00A001C8 /* SettingsViewController.swift in Sources */,
 				C9DB4401287582EA00A001C8 /* RoadViewController.swift in Sources */,
+				C9C02E222896DB0C00E4031C /* AlertView.swift in Sources */,
 				C9DB43FF287582BC00A001C8 /* LeaderBoardViewController.swift in Sources */,
 				C9DB4405287586E700A001C8 /* PauseRoadViewController.swift in Sources */,
 			);

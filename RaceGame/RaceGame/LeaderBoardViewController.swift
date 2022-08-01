@@ -16,10 +16,17 @@ class LeaderBoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        var temp = AlertView()
+        temp.frame = CGRect(x: 200, y: 300, width:Int(temp.frame.width), height: Int(temp.frame.height))
+        self.view.addSubview(temp)
+        
         leaderBoard.addShadow()
         nameLabel.addShadow()
         distLabel.addShadow()
     }
+    
+    
 
 
 }

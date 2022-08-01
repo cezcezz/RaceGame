@@ -91,7 +91,7 @@ class RoadViewController: UIViewController {
     var timer = Timer()
 
     var imageView = UIImageView()
-    let car = UIImage(named: "car")
+    var car = UIImage(named: "carOrange")
     var arrayImageView = [ImageY]()
   //  var copyView = UIView()
    // var carMet: CarMetod = CarMetod.init(xPos: 0)
@@ -122,7 +122,7 @@ class RoadViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        imageView.frame = position.getLine(mainView: self.view)
+        imageView.frame = position.getLine(mainView: self.view)//62x96
         imageView.image = car
         imageView.contentMode = .scaleToFill
         imageView.layer.zPosition = 1
@@ -196,7 +196,7 @@ class RoadViewController: UIViewController {
                     
                     if Int(i.image.frame.minY) >= Int(self.view.frame.height){
                         i.image.removeFromSuperview()
-                        self.arrayImageView.removeFirst()
+                        self.arrayImageView.removeFirst()// подсчет результата
                         self.score += 1
                         self.scoreLabel.text = "Your score: \(self.score)"
                     }

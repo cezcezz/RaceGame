@@ -114,40 +114,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="b2L-Yg-99T">
-                                <rect key="frame" x="184" y="233" width="202" height="30"/>
+                            <segmentedControl clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="THI-iV-pLh">
+                                <rect key="frame" x="35" y="167" width="344" height="101"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="598-LU-m8M"/>
-                                    <constraint firstAttribute="width" constant="114" id="nwF-vv-ynx"/>
+                                    <constraint firstAttribute="height" constant="100" id="WLe-Nz-vbz"/>
                                 </constraints>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyX-0p-38i">
-                                <rect key="frame" x="30" y="235" width="98.5" height="25.5"/>
-                                <fontDescription key="fontDescription" name="Rakkas-Regular" family="Rakkas" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <segments>
+                                    <segment title="" image="carRed"/>
+                                    <segment title="" image="carOrange"/>
+                                    <segment title="" image="carGrey"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didSelectColorCar:" destination="F2Z-KD-kGo" eventType="valueChanged" id="BN1-AP-nRL"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AxH-Jb-p2P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AxH-Jb-p2P" firstAttribute="bottom" secondItem="b2L-Yg-99T" secondAttribute="bottom" constant="600" id="Ag3-da-RBN"/>
                             <constraint firstItem="AxH-Jb-p2P" firstAttribute="trailing" secondItem="7Ft-ti-Oa1" secondAttribute="trailing" constant="20" id="KRK-Rv-32J"/>
                             <constraint firstItem="7Ft-ti-Oa1" firstAttribute="leading" secondItem="AxH-Jb-p2P" secondAttribute="leading" constant="20" id="KV2-kb-Cgt"/>
+                            <constraint firstItem="THI-iV-pLh" firstAttribute="top" secondItem="7Ft-ti-Oa1" secondAttribute="bottom" constant="60" id="L1b-S4-Svt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="THI-iV-pLh" secondAttribute="trailing" constant="15" id="PAO-Ju-9rD"/>
                             <constraint firstItem="7Ft-ti-Oa1" firstAttribute="top" secondItem="AxH-Jb-p2P" secondAttribute="top" constant="30" id="X1s-rx-Id5"/>
-                            <constraint firstItem="b2L-Yg-99T" firstAttribute="centerY" secondItem="nyX-0p-38i" secondAttribute="centerY" id="cwZ-Zl-VmZ"/>
-                            <constraint firstItem="AxH-Jb-p2P" firstAttribute="trailing" secondItem="b2L-Yg-99T" secondAttribute="trailing" constant="30" id="mBr-zM-ueK"/>
-                            <constraint firstItem="nyX-0p-38i" firstAttribute="leading" secondItem="AxH-Jb-p2P" secondAttribute="leading" constant="30" id="skg-k1-Mqh"/>
+                            <constraint firstItem="THI-iV-pLh" firstAttribute="leading" secondItem="sw3-Sw-yA5" secondAttribute="leadingMargin" constant="15" id="ZnC-hR-YGL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="settingLabel" destination="7Ft-ti-Oa1" id="K0q-Bq-e83"/>
-                        <outlet property="soundValueLabel" destination="nyX-0p-38i" id="5zy-oO-FxQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rli-yI-GUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654" y="124"/>
+            <point key="canvasLocation" x="1653.6231884057972" y="123.88392857142857"/>
         </scene>
         <!--Leader Board View Controller-->
         <scene sceneID="0tb-wy-k6N">
@@ -196,10 +195,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXw-db-Mue" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="124"/>
+            <point key="canvasLocation" x="850.72463768115949" y="123.88392857142857"/>
         </scene>
     </scenes>
     <resources>
+        <image name="carGrey" width="96" height="96"/>
+        <image name="carOrange" width="96" height="96"/>
+        <image name="carRed" width="96" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

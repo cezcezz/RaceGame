@@ -7,192 +7,265 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B0B54018-BD71-4532-86E9-E5ECC9B7FAFF"
+            uuid = "861A70BC-A70D-4A85-9FE2-534866934C41"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RaceGame/RoadViewController.swift"
+            filePath = "RaceGame/AlertView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BB75D16C-6D5F-48BA-9707-C00D2A3DC6FB"
+            uuid = "0E44D82E-8F42-4EDC-BA79-54D0F561232D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RaceGame/RoadViewController.swift"
+            filePath = "RaceGame/AlertView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
-            landmarkName = "didTapPauseButton()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "658FF2B8-676B-456E-A072-6E77227A4A54"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RaceGame/RoadViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7743C17E-5197-44EF-B903-1424E424B355"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RaceGame/RoadViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DD3D9955-9D66-48F1-A62A-1E33D8C3607A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RaceGame/RoadViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B8E32CAE-385E-4736-95BA-E04C12596A25"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RaceGame/RoadViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FD8675F0-1040-472A-956C-C220A7AF67CD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RaceGame/RoadViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C5ED987D-BF51-40E1-87F6-2FDD06CD5A70"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RaceGame/RoadViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "RoadViewController"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "AlertView"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0E44D82E-8F42-4EDC-BA79-54D0F561232D - 6056f47eda53e916"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RaceGame.AlertView.__allocating_init(frame: __C.CGRect) -&gt; RaceGame.AlertView"
+                  moduleName = "RaceGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cezar_/Desktop/RaceGame/RaceGame/RaceGame/AlertView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  uuid = "0E44D82E-8F42-4EDC-BA79-54D0F561232D - 5bf718c3332c46d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RaceGame.AlertView.init(frame: __C.CGRect) -&gt; RaceGame.AlertView"
+                  moduleName = "RaceGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cezar_/Desktop/RaceGame/RaceGame/RaceGame/AlertView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "113">
+               </Location>
+               <Location
+                  uuid = "0E44D82E-8F42-4EDC-BA79-54D0F561232D - 9e74da460590cb6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RaceGame.AlertView.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RaceGame.AlertView&gt;"
+                  moduleName = "RaceGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cezar_/Desktop/RaceGame/RaceGame/RaceGame/AlertView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "0E44D82E-8F42-4EDC-BA79-54D0F561232D - cf3f4e091b68fd05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RaceGame.AlertView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RaceGame.AlertView&gt;"
+                  moduleName = "RaceGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cezar_/Desktop/RaceGame/RaceGame/RaceGame/AlertView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  uuid = "0E44D82E-8F42-4EDC-BA79-54D0F561232D - e02f8a79b3808e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RaceGame.AlertView.__deallocating_deinit"
+                  moduleName = "RaceGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cezar_/Desktop/RaceGame/RaceGame/RaceGame/AlertView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3F0BC8AE-5C92-4E6F-88BE-ABB586ACBC60"
+            uuid = "6C48AC05-24B6-4DB6-AD3C-0C7B706734F4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RaceGame/RoadViewController.swift"
+            filePath = "RaceGame/AlertView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "lineControl"
-            landmarkType = "13">
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AlertView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6C48AC05-24B6-4DB6-AD3C-0C7B706734F4 - 168d84ea99a21e4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RaceGame.AlertView.alertViewTextField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "RaceGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cezar_/Desktop/RaceGame/RaceGame/RaceGame/AlertView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "94">
+               </Location>
+               <Location
+                  uuid = "6C48AC05-24B6-4DB6-AD3C-0C7B706734F4 - 469ffa969de36a41"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RaceGame.AlertView.alertViewTextField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "RaceGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cezar_/Desktop/RaceGame/RaceGame/RaceGame/AlertView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "6C48AC05-24B6-4DB6-AD3C-0C7B706734F4 - 2a22da07382d7150"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RaceGame.AlertView.alertViewTextField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "RaceGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cezar_/Desktop/RaceGame/RaceGame/RaceGame/AlertView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "6C48AC05-24B6-4DB6-AD3C-0C7B706734F4 - af0387922dd613e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RaceGame.AlertView.alertViewTextField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "RaceGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cezar_/Desktop/RaceGame/RaceGame/RaceGame/AlertView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "6C48AC05-24B6-4DB6-AD3C-0C7B706734F4 - 5bf718c3332c46d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RaceGame.AlertView.init(frame: __C.CGRect) -&gt; RaceGame.AlertView"
+                  moduleName = "RaceGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cezar_/Desktop/RaceGame/RaceGame/RaceGame/AlertView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "113">
+               </Location>
+               <Location
+                  uuid = "6C48AC05-24B6-4DB6-AD3C-0C7B706734F4 - cf3f4e091b68fd05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RaceGame.AlertView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RaceGame.AlertView&gt;"
+                  moduleName = "RaceGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Cezar_/Desktop/RaceGame/RaceGame/RaceGame/AlertView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "74">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9B06649B-34DE-4FCF-9020-F403EBA17C88"
+            uuid = "832A5A76-B5AC-40A8-98BB-E3BC310D0547"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RaceGame/RoadViewController.swift"
+            filePath = "RaceGame/LeaderBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "getLineBarrier(mainView:yCor:)"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D148CAB8-E7AD-4FB3-BEB3-AB908AF9E172"
+            uuid = "838845FD-249D-4019-9947-F2FB836B25A2"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RaceGame/RoadViewController.swift"
+            filePath = "RaceGame/LeaderBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "startedGameTimer(yCord:mainView:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "749AED3E-58BF-4851-8DAB-22226A87C775"
+            uuid = "4D52DFD8-B605-4C2B-A468-B68BE6B68404"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RaceGame/RoadViewController.swift"
+            filePath = "RaceGame/LeaderBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "startedGameTimer(yCord:mainView:)"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
